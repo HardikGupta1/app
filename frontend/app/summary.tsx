@@ -32,7 +32,6 @@ export default function SummaryScreen() {
       city: draftProfile.city || '',
       state: draftProfile.state || '',
       country: draftProfile.country || '',
-      avatar: draftProfile.avatar || '',
     };
 
     dispatch(saveProfileAsync(profile) as any).then(() => {
