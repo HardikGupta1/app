@@ -8,14 +8,11 @@ import {
   KeyboardAvoidingView,
   Platform,
   ScrollView,
-  Image,
-  Alert,
 } from 'react-native';
 import { useRouter } from 'expo-router';
 import { useAppDispatch, useAppSelector } from '../store/hooks';
 import { updateDraft } from '../store/profileSlice';
 import { validateBasicInfo } from '../utils/validation';
-import * as ImagePicker from 'expo-image-picker';
 import { Ionicons } from '@expo/vector-icons';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
@@ -28,30 +25,7 @@ export default function BasicInfoScreen() {
   const [fullName, setFullName] = useState(draftProfile.fullName || '');
   const [email, setEmail] = useState(draftProfile.email || '');
   const [age, setAge] = useState(draftProfile.age || '');
-  const [avatar, setAvatar] = useState(draftProfile.avatar || '');
   const [errors, setErrors] = useState<any>({});
-
-  const pickImage = async () => {
-    const permissionResult = await ImagePicker.requestMediaLibraryPermissionsAsync();
-    
-    if (!permissionResult.granted) {
-      Alert.alert('Permission Required', 'Please allow access to your photos');
-      return;
-    }
-
-    const result = await ImagePicker.launchImageLibraryAsync({
-      mediaTypes: ['images'],
-      allowsEditing: true,
-      aspect: [1, 1],
-      quality: 0.5,
-      base64: true,
-    });
-
-    if (!result.canceled && result.assets[0].base64) {
-      const base64Image = `data:image/jpeg;base64,${result.assets[0].base64}`;
-      setAvatar(base64Image);
-    }
-  };
 
   const handleNext = () => {
     const validationErrors = validateBasicInfo({ fullName, email, age });
@@ -61,7 +35,7 @@ export default function BasicInfoScreen() {
       return;
     }
 
-    dispatch(updateDraft({ fullName, email, age, avatar }));
+    dispatch(updateDraft({ fullName, email, age }));
     router.push('/address-info');
   };
 
