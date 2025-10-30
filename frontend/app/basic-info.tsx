@@ -55,20 +55,6 @@ export default function BasicInfoScreen() {
           </Text>
           <Text style={styles.subtitle}>Step 1 of 3: Basic Information</Text>
 
-          {/* Avatar Picker */}
-          <View style={styles.avatarSection}>
-            <TouchableOpacity style={styles.avatarButton} onPress={pickImage}>
-              {avatar ? (
-                <Image source={{ uri: avatar }} style={styles.avatarImage} />
-              ) : (
-                <View style={styles.avatarPlaceholder}>
-                  <Ionicons name="camera" size={32} color="#007AFF" />
-                  <Text style={styles.avatarText}>Add Photo</Text>
-                </View>
-              )}
-            </TouchableOpacity>
-          </View>
-
           {/* Full Name */}
           <View style={styles.inputGroup}>
             <Text style={styles.label}>Full Name *</Text>
