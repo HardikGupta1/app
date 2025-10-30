@@ -7,7 +7,6 @@ import {
   TouchableOpacity,
   Alert,
   ActivityIndicator,
-  Image,
 } from 'react-native';
 import { useRouter } from 'expo-router';
 import { useAppDispatch, useAppSelector } from '../store/hooks';
