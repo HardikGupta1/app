@@ -48,13 +48,9 @@ export default function HomeScreen() {
   const renderProfile = ({ item }: { item: any }) => (
     <View style={styles.profileCard}>
       <View style={styles.profileHeader}>
-        {item.avatar ? (
-          <Image source={{ uri: item.avatar }} style={styles.avatar} />
-        ) : (
-          <View style={[styles.avatar, styles.avatarPlaceholder]}>
-            <Ionicons name="person" size={32} color="#007AFF" />
-          </View>
-        )}
+        <View style={[styles.avatar, styles.avatarPlaceholder]}>
+          <Ionicons name="person" size={32} color="#007AFF" />
+        </View>
         <View style={styles.profileInfo}>
           <Text style={styles.profileName}>{item.fullName}</Text>
           <Text style={styles.profileDetail}>{item.email}</Text>
