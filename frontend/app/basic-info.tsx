@@ -147,36 +147,6 @@ const styles = StyleSheet.create({
     color: '#666',
     marginBottom: 32,
   },
-  avatarSection: {
-    alignItems: 'center',
-    marginBottom: 32,
-  },
-  avatarButton: {
-    width: 120,
-    height: 120,
-    borderRadius: 60,
-    overflow: 'hidden',
-  },
-  avatarImage: {
-    width: '100%',
-    height: '100%',
-  },
-  avatarPlaceholder: {
-    width: '100%',
-    height: '100%',
-    backgroundColor: '#E3F2FD',
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderWidth: 2,
-    borderColor: '#007AFF',
-    borderStyle: 'dashed',
-  },
-  avatarText: {
-    marginTop: 8,
-    color: '#007AFF',
-    fontSize: 14,
-    fontWeight: '600',
-  },
   inputGroup: {
     marginBottom: 24,
   },
