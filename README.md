@@ -273,10 +273,6 @@ This project is for educational/assignment purposes.
 - Limited to device storage capacity
 - No data export/import features
 
-## 📞 Support
 
-For questions or issues, please refer to the assignment guidelines or contact the project maintainer.
-
----
 
 **Built with ❤️ using React Native, TypeScript, and Redux Toolkit**
