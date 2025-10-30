@@ -9,7 +9,6 @@ export interface ProfileData {
   city: string;
   state: string;
   country: string;
-  avatar?: string; // base64 image
 }
 
 export interface DraftProfile {
@@ -19,7 +18,6 @@ export interface DraftProfile {
   city?: string;
   state?: string;
   country?: string;
-  avatar?: string;
 }
 
 interface ProfileState {
