@@ -56,12 +56,6 @@ export default function SummaryScreen() {
         <Text style={styles.subtitle}>Step 3 of 3: Confirm your information</Text>
 
         <View style={styles.summaryCard}>
-          {draftProfile.avatar && (
-            <View style={styles.avatarSection}>
-              <Image source={{ uri: draftProfile.avatar }} style={styles.avatar} />
-            </View>
-          )}
-
           <View style={styles.section}>
             <Text style={styles.sectionTitle}>Basic Information</Text>
             <View style={styles.infoRow}>
